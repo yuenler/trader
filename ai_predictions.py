@@ -40,4 +40,4 @@ def get_ai_predictions(news_headlines):
 
     recommendations_json = response.choices[0].text.strip()
 
-    return recommendations_json
+    return general_trends, recommendations_json

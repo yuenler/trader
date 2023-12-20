@@ -14,10 +14,14 @@ def main():
         all_news = bing_news + newsdata_news
 
         # Get AI predictions
-        predictions = get_ai_predictions(all_news)
+        general_trends, json_predictions = get_ai_predictions(all_news)
 
         # Execute trades
-        execute_trades(predictions)
+        execute_trades(json_predictions)
+
+        print(general_trends)
+        print('Given these predicted trends, GPT-4 recommends the following trades:')
+        print(json_predictions)
 
         # Wait for 15 minutes
         time.sleep(900)
