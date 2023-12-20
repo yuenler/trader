@@ -7,11 +7,14 @@ from execute_trades import execute_trades
 def main():
     while True:
         # Get news headlines
-        bing_news = get_news_from_bing()
         newsdata_news = get_news_from_newsdata()
+        print(newsdata_news)
+        break
+        bing_news = get_news_from_bing()
 
         # Combine news sources
         all_news = bing_news + newsdata_news
+        
 
         # Get AI predictions
         general_trends, json_predictions = get_ai_predictions(all_news)

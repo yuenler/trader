@@ -1,0 +1,4 @@
+requests
+openai
+python-dotenv
+alpaca_trade_api

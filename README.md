@@ -15,12 +15,6 @@ This streamlined process aims to provide an advanced, AI-driven approach to stoc
 - Python 3.x
 - Pip (Python package installer)
 
-### Dependencies
-To install the required Python packages, run the following command:
-```bash
-pip install requests openai alpaca_trade_api
-```
-
 ### API Keys
 You will need to obtain API keys from:
 - Bing News Search API
@@ -36,6 +30,10 @@ You will need to obtain API keys from:
 2. Enter the directory:
    ```bash
    cd trader
+   ```
+3. Install the dependencies:
+   ```bash
+   pip install -r requirements.txt
    ```
 
 Before running the program, create a `.env` file in the root directory with the following variables:
