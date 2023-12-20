@@ -1,9 +1,17 @@
 import openai
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 def get_ai_predictions(news_headlines):
-    openai.api_key = 'YOUR_OPENAI_API_KEY'
+    """
+    Sends news headlines to OpenAI and gets stock market predictions.
+    Input: List of tuples (headline, datePublished).
+    Returns: String containing AI's predictions.
+    """
+    openai.api_key = os.getenv('OPENAI_API_KEY')
 
-    # Combine headlines into a single string
     combined_headlines = '. '.join([headline for headline, _ in news_headlines])
 
     response = openai.Completion.create(

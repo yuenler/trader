@@ -32,7 +32,14 @@ You will need to obtain API keys from:
    ```bash
    cd trader
    ```
-3. Update the API keys in respective files (`news_bing.py`, `news_newsdata.py`, `ai_predictions.py`, and `execute_trades.py`).
+
+Before running the program, create a `.env` file in the root directory with the following variables:
+- `BING_API_KEY`: Your Bing News Search API key.
+- `NEWSDATA_API_KEY`: Your Newsdata.io API key.
+- `OPENAI_API_KEY`: Your OpenAI API key.
+- `ALPACA_API_KEY`: Your Alpaca Trading API key.
+- `ALPACA_SECRET_KEY`: Your Alpaca Trading secret key.
+
 
 ## Usage
 Run the `main.py` script to start the program:

@@ -1,9 +1,17 @@
 import requests
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 def get_news_from_newsdata():
+    """
+    Fetches the latest news from newsdata.io.
+    Returns: List of tuples (title, pubDate).
+    """
     url = "https://newsdata.io/api/1/news"
     params = {
-        'apikey': 'YOUR_NEWSDATA_API_KEY',
+        'apikey': os.getenv('NEWSDATA_API_KEY'),
         'q': 'technology',
         'language': 'en',
         'sortby': 'date'
