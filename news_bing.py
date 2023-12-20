@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-def get_news_from_bing():
+def get_news_from_bing(is_first_run_of_day, num_minutes_between_runs):
     """
     Fetches the latest news from Bing News Search API.
     Returns: List of tuples (headline, datePublished).
