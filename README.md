@@ -26,11 +26,12 @@ You will need to obtain API keys from:
 ### Setup
 1. Clone the repository:
    ```bash
-   git clone [repository-url]
+   git clone https://github.com/yuenler/trader.git
+   ``
    ```
 2. Enter the directory:
    ```bash
-   cd [directory-name]
+   cd trader
    ```
 3. Update the API keys in respective files (`news_bing.py`, `news_newsdata.py`, `ai_predictions.py`, and `execute_trades.py`).
 
@@ -45,15 +46,3 @@ The program will continuously fetch news, analyze it, and execute trades every 1
 - You can adjust the frequency of the trading loop by modifying the sleep interval in `main.py`.
 - Update the query parameters in `news_bing.py` and `news_newsdata.py` to change the news sources or topics.
 
-## Disclaimer
-- This program is provided for educational purposes only. Automated trading can be risky and is subject to financial regulations. Ensure compliance with the laws in your jurisdiction.
-- The program does not guarantee profitable trading outcomes. Use it at your own risk.
-
-## Contributing
-Contributions to this project are welcome. Please fork the repository and submit a pull request with your changes.
-
-## License
-[Add your chosen license here]
-
-## Contact
-[Your contact information or links to your social media profiles]
