@@ -27,7 +27,6 @@ You will need to obtain API keys from:
 1. Clone the repository:
    ```bash
    git clone https://github.com/yuenler/trader.git
-   ``
    ```
 2. Enter the directory:
    ```bash
