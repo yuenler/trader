@@ -2,7 +2,12 @@
 # AI-Powered Stock Trading Program
 
 ## Overview
-This program is designed to automate stock trading by parsing news headlines using OpenAI's GPT-4 model. It fetches recent news from the tech sector using Bing and Newsdata.io APIs, analyzes the headlines with OpenAI to predict stock market trends, and executes trades using the Alpaca Trading API.
+This AI-powered stock trading program automates the process of trading stocks by leveraging the capabilities of OpenAI's GPT-4 model. The program operates in several stages:
+1. It begins by fetching the latest news in the tech sector from two sources: Bing and Newsdata.io APIs.
+2. Using a two-step prompt engineering approach, the program then analyzes these headlines with OpenAI's GPT-4. In the first step, GPT-4 generates general stock market trends and predictions based on the given news headlines. In the second step, it delivers specific buy or sell recommendations for stocks. These recommendations are provided in a structured JSON format, ensuring consistency and ease of interpretation. This format includes details such as the stock symbol, the recommended action (buy or sell), and a confidence metric.
+3. Finally, the program uses the Alpaca Trading API to execute trades based on these AI-generated predictions and recommendations.
+
+This streamlined process aims to provide an advanced, AI-driven approach to stock trading, potentially offering insights beyond conventional analysis by considering broader market impacts and interconnections implied by the latest news.
 
 ## Installation
 
