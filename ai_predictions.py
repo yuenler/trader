@@ -21,7 +21,7 @@ def get_ai_predictions(news_headlines):
                      f"them. Give them a list of stocks and a short prediction for each of them.\n\n" \
 
     response = client.chat.completions.create(
-      model="gpt-4",
+      model="gpt-4-1106-preview",
       messages=[
           {'role': 'system', 'content': system_prompt},
           {'role': 'user', 'content': combined_headlines},
@@ -38,7 +38,7 @@ def get_ai_predictions(news_headlines):
                        f"{{'stock_symbol': {{'action': 'buy/sell', 'confidence': percentage}}}}."
 
     response = client.chat.completions.create(
-      model="gpt-4",
+      model="gpt-4-1106-preview",
       response_format={ "type": "json_object" },
       messages=[
           {'role': 'system', 'content': system_prompt},
