@@ -47,7 +47,7 @@ def execute_trades(recommendations_json):
                 investment_amount = 2000
                 quantity = calculate_quantity(api, investment_amount, current_price)
 
-                print(f"Buying {quantity} of {stock} for ${quantity * current_price}.")
+                print(f"Buying {quantity} shares of {stock} for ${quantity * current_price}.")
                
                 # Submit the order
                 try:
@@ -66,7 +66,7 @@ def execute_trades(recommendations_json):
                 investment_amount = 1000
                 quantity = calculate_quantity(api, investment_amount, current_price)
 
-                print(f"Buying {quantity} of {stock} for ${quantity * current_price}.")
+                print(f"Buying {quantity} shares of {stock} for ${quantity * current_price}.")
 
                 # Submit the order
                 try:
