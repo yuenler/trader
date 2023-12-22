@@ -12,20 +12,22 @@ def main(num_minutes_between_runs):
         # Get news headlines
         newsdata_news = get_news_from_newsdata(is_first_run_of_day, num_minutes_between_runs)
         
-        bing_news = get_news_from_bing(is_first_run_of_day, num_minutes_between_runs)
+        # bing_news = get_news_from_bing(is_first_run_of_day, num_minutes_between_runs)
+        bing_news = []
 
         # Combine news sources
         all_news = bing_news + newsdata_news
 
+        # Print all news in a formatted way
+        for news in all_news:
+            print(f"{news[1]}: {news[0]}\n")
+
+
         # Get AI predictions
-        general_trends, json_predictions = get_ai_predictions(all_news)
+        json_predictions = get_ai_predictions(all_news)
 
         # Execute trades
         execute_trades(json_predictions)
-
-        print(general_trends)
-        print('Given these predicted trends, GPT-4 recommends the following trades:')
-        print(json_predictions)
 
         is_first_run_of_day = False
 
