@@ -2,4 +2,5 @@ requests
 openai
 python-dotenv
 alpaca_trade_api
-python-dotenv
+python-dateutil
+alpaca-py
